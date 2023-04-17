@@ -18,8 +18,6 @@ Welcome to Adam's Ale Documentation!
 
    /water/index_water
    /gen/index_gen
-..   authors
-   
 
 Indices and tables
 ==================
