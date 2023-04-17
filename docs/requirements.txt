@@ -4,3 +4,4 @@ pandas
 altair
 numpy
 pydata_sphinx_theme
+sphinx-copybutton
