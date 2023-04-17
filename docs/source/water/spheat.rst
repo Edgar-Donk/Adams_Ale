@@ -9,7 +9,7 @@ Specific heat water at 1 bar.
 
 .. math::
 
-    c_{p,s} = a + b\cdot T + c\cdot T^{1.5} + d\dot T^2 + e\cdot T^{2.5} \tag{6}
+    c_{p,s} = a + b\cdot T + c\cdot T^{1.5} + d\cdot T^2 + e\cdot T^{2.5} \tag{6}
 
 .. |cps| replace:: c\ :sub:`p,s`\
 
