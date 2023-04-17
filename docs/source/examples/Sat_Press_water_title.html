@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-98133fc76cbf687de8b17f890a0d8463"}, "mark": "line", "encoding": {"tooltip": [{"field": "Temperature \u00b0C", "type": "quantitative"}, {"field": "Ps bar", "format": ".3f", "type": "quantitative"}], "x": {"field": "Temperature \u00b0C", "type": "quantitative"}, "y": {"field": "Ps bar", "type": "quantitative"}}, "title": {"text": "Saturation Pressure of Water"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-98133fc76cbf687de8b17f890a0d8463": [{"Temperature \u00b0C": 0.0, "Ps bar": 0.006112128459398545}, {"Temperature \u00b0C": 1.0, "Ps bar": 0.006570784581389542}, {"Temperature \u00b0C": 2.0, "Ps bar": 0.007059688552381916}, {"Temperature \u00b0C": 3.0, "Ps bar": 0.007580542683816755}, {"Temperature \u00b0C": 4.0, "Ps bar": 0.008135127075689108}, {"Temperature \u00b0C": 5.0, "Ps bar": 0.00872530222045737}, {"Temperature \u00b0C": 6.0, "Ps bar": 0.009353011652457785}, {"Temperature \u00b0C": 7.0, "Ps bar": 0.010020284642126452}, {"Temperature \u00b0C": 8.0, "Ps bar": 0.010729238934282192}, {"Temperature \u00b0C": 9.0, "Ps bar": 0.01148208352967199}, {"Temperature \u00b0C": 10.0, "Ps bar": 0.012281121508936099}, {"Temperature \u00b0C": 11.0, "Ps bar": 0.01312875289809915}, {"Temperature \u00b0C": 12.0, "Ps bar": 0.014027477574648546}, {"Temperature \u00b0C": 13.0, "Ps bar": 0.014979898213215666}, {"Temperature \u00b0C": 14.0, "Ps bar": 0.01598872326983111}, {"Temperature \u00b0C": 15.0, "Ps bar": 0.01705677000368174}, {"Temperature \u00b0C": 16.0, "Ps bar": 0.018186967535254294}, {"Temperature \u00b0C": 17.0, "Ps bar": 0.01938235993971228}, {"Temperature \u00b0C": 18.0, "Ps bar": 0.020646109374308774}, {"Temperature \u00b0C": 19.0, "Ps bar": 0.021981499238605602}, {"Temperature \u00b0C": 20.0, "Ps bar": 0.023391937366227543}, {"Temperature \u00b0C": 21.0, "Ps bar": 0.024880959246848057}, {"Temperature \u00b0C": 22.0, "Ps bar": 0.02645223127706767}, {"Temperature \u00b0C": 23.0, "Ps bar": 0.028109554038817465}, {"Temperature \u00b0C": 24.0, "Ps bar": 0.029856865603885945}, {"Temperature \u00b0C": 25.0, "Ps bar": 0.03169824486313973}, {"Temperature \u00b0C": 26.0, "Ps bar": 0.033637914878985084}, {"Temperature \u00b0C": 27.0, "Ps bar": 0.03568024625958825}, {"Temperature \u00b0C": 28.0, "Ps bar": 0.03782976055334931}, {"Temperature \u00b0C": 29.0, "Ps bar": 0.04009113366210604}, {"Temperature \u00b0C": 30.0, "Ps bar": 0.042469199271521235}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

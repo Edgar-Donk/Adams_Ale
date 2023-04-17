@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-4fbf59f06feb1b26d59d4c96c5961884"}, "mark": "line", "encoding": {"tooltip": [{"field": "T", "type": "quantitative"}, {"field": "hfg", "format": ".1f", "type": "quantitative"}], "x": {"axis": {"title": "Temperature \u00b0C"}, "field": "T", "type": "quantitative"}, "y": {"axis": {"title": "Latent Heat kJ/kg"}, "field": "hfg", "scale": {"domain": [2420, 2510]}, "type": "quantitative"}}, "title": {"text": "Latent Heat Evaporisation of Water", "color": "#282828"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-4fbf59f06feb1b26d59d4c96c5961884": [{"T": 0.0, "hfg": 2500.304}, {"T": 1.0, "hfg": 2498.030720923401}, {"T": 2.0, "hfg": 2495.740648677652}, {"T": 3.0, "hfg": 2493.440331587545}, {"T": 4.0, "hfg": 2491.132195374144}, {"T": 5.0, "hfg": 2488.817669120278}, {"T": 6.0, "hfg": 2486.497726777009}, {"T": 7.0, "hfg": 2484.173085354632}, {"T": 8.0, "hfg": 2481.844298469606}, {"T": 9.0, "hfg": 2479.511807438369}, {"T": 10.0, "hfg": 2477.17597202432}, {"T": 11.0, "hfg": 2474.837090275913}, {"T": 12.0, "hfg": 2472.495412019541}, {"T": 13.0, "hfg": 2470.1511484247603}, {"T": 14.0, "hfg": 2467.804479015654}, {"T": 15.0, "hfg": 2465.4555569538747}, {"T": 16.0, "hfg": 2463.104513112576}, {"T": 17.0, "hfg": 2460.7514592804905}, {"T": 18.0, "hfg": 2458.396490725051}, {"T": 19.0, "hfg": 2456.0396882733194}, {"T": 20.0, "hfg": 2453.6811200235675}, {"T": 21.0, "hfg": 2451.320842769356}, {"T": 22.0, "hfg": 2448.958903196639}, {"T": 23.0, "hfg": 2446.5953388993967}, {"T": 24.0, "hfg": 2444.230179248496}, {"T": 25.0, "hfg": 2441.8634461406255}, {"T": 26.0, "hfg": 2439.4951546482935}, {"T": 27.0, "hfg": 2437.125313587539}, {"T": 28.0, "hfg": 2434.7539260166177}, {"T": 29.0, "hfg": 2432.3809896764087}, {"T": 30.0, "hfg": 2430.00649738126}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

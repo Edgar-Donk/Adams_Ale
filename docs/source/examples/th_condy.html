@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-b29a3d62d2bb24022ca2ea9b97936b13"}, "mark": "line", "encoding": {"tooltip": [{"field": "T", "type": "quantitative"}, {"field": "ls", "format": ".1f", "type": "quantitative"}], "x": {"axis": {"title": "Temperature \u00b0C"}, "field": "T", "type": "quantitative"}, "y": {"axis": {"title": "Thermal condy W/(m K)"}, "field": "ls", "scale": {"domain": [0.56, 0.62]}, "type": "quantitative"}}, "title": {"text": "Thermal Conductivity of Saturated Liquid Water", "color": "#282828"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b29a3d62d2bb24022ca2ea9b97936b13": [{"T": 0.0, "ls": 0.5650285}, {"T": 1.0, "ls": 0.5665969101682}, {"T": 2.0, "ls": 0.5686099932282702}, {"T": 3.0, "ls": 0.5706432602056253}, {"T": 4.0, "ls": 0.5726658664112001}, {"T": 5.0, "ls": 0.5746683259514594}, {"T": 6.0, "ls": 0.5766469819858662}, {"T": 7.0, "ls": 0.5786003676264565}, {"T": 8.0, "ls": 0.5805279827770851}, {"T": 9.0, "ls": 0.5824297949842001}, {"T": 10.0, "ls": 0.5843060091748105}, {"T": 11.0, "ls": 0.5861569522220742}, {"T": 12.0, "ls": 0.587983011628713}, {"T": 13.0, "ls": 0.58978460164542}, {"T": 14.0, "ls": 0.5915621440896247}, {"T": 15.0, "ls": 0.5933160573834869}, {"T": 16.0, "ls": 0.5950467503392001}, {"T": 17.0, "ls": 0.5967546187530367}, {"T": 18.0, "ls": 0.5984400436885889}, {"T": 19.0, "ls": 0.6001033907846854}, {"T": 20.0, "ls": 0.6017450101847553}, {"T": 21.0, "ls": 0.6033652368387136}, {"T": 22.0, "ls": 0.6049643910217456}, {"T": 23.0, "ls": 0.6065427789719214}, {"T": 24.0, "ls": 0.6081006935846585}, {"T": 25.0, "ls": 0.6096384151249999}, {"T": 26.0, "ls": 0.6111562119334105}, {"T": 27.0, "ls": 0.6126543411103256}, {"T": 28.0, "ls": 0.6141330491708893}, {"T": 29.0, "ls": 0.6155925726653434}, {"T": 30.0, "ls": 0.6170331387631345}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

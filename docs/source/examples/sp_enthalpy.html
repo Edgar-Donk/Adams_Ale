@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-00bcb70e8b66dcb2c33c3f40e7725413"}, "mark": "line", "encoding": {"tooltip": [{"field": "T", "type": "quantitative"}, {"field": "hs", "format": ".2f", "type": "quantitative"}], "x": {"axis": {"title": "Temperature \u00b0C"}, "field": "T", "type": "quantitative"}, "y": {"axis": {"title": "Spec Enthalpy kJ/kg"}, "field": "hs", "type": "quantitative"}}, "title": {"text": "Specific Enthalpy of Liquid Water", "color": "#282828"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-00bcb70e8b66dcb2c33c3f40e7725413": [{"T": 0.0, "hs": -0.02844699}, {"T": 1.0, "hs": 4.182474019147758}, {"T": 2.0, "hs": 8.3914386828033}, {"T": 3.0, "hs": 12.598523257744997}, {"T": 4.0, "hs": 16.80380242058622}, {"T": 5.0, "hs": 21.007349288469065}, {"T": 6.0, "hs": 25.209235439758185}, {"T": 7.0, "hs": 29.409530934734526}, {"T": 8.0, "hs": 33.6083043362891}, {"T": 9.0, "hs": 37.80562273061676}, {"T": 10.0, "hs": 42.00155174791001}, {"T": 11.0, "hs": 46.19615558305267}, {"T": 12.0, "hs": 50.38949701631378}, {"T": 13.0, "hs": 54.581637434041305}, {"T": 14.0, "hs": 58.77263684935589}, {"T": 15.0, "hs": 62.962553922844684}, {"T": 16.0, "hs": 67.15144598325507}, {"T": 17.0, "hs": 71.33936904818842}, {"T": 18.0, "hs": 75.52637784479397}, {"T": 19.0, "hs": 79.71252583046245}, {"T": 20.0, "hs": 83.89786521351998}, {"T": 21.0, "hs": 88.08244697392175}, {"T": 22.0, "hs": 92.26632088394587}, {"T": 23.0, "hs": 96.44953552888698}, {"T": 24.0, "hs": 100.63213832775035}, {"T": 25.0, "hs": 104.8141755539453}, {"T": 26.0, "hs": 108.99569235597913}, {"T": 27.0, "hs": 113.17673277815094}, {"T": 28.0, "hs": 117.35733978124526}, {"T": 29.0, "hs": 121.53755526322597}, {"T": 30.0, "hs": 125.71742007993}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

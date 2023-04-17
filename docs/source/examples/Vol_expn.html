@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-ae62e039f276987bc575f1f0d73f8391"}, "mark": "line", "encoding": {"tooltip": [{"field": "T", "type": "quantitative"}, {"field": "b", "format": ".5f", "type": "quantitative"}], "x": {"axis": {"title": "Temperature \u00b0C"}, "field": "T", "type": "quantitative"}, "y": {"axis": {"title": "Coefft Vol Thermal Expn 1/K"}, "field": "b", "type": "quantitative"}}, "title": {"text": "Coefficient Volumetric Thermal Expansion of Liquid Water"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-ae62e039f276987bc575f1f0d73f8391": [{"T": 0.0, "b": -6.8785895e-05}, {"T": 1.0, "b": -4.9144420718e-05}, {"T": 2.0, "b": -3.110784934421177e-05}, {"T": 3.0, "b": -1.4062166802916001e-05}, {"T": 4.0, "b": 2.211738312000002e-06}, {"T": 5.0, "b": 1.784050029359095e-05}, {"T": 6.0, "b": 3.290956203537573e-05}, {"T": 7.0, "b": 4.748164933898308e-05}, {"T": 8.0, "b": 6.160536247030586e-05}, {"T": 9.0, "b": 7.5319802242e-05}, {"T": 10.0, "b": 8.865731548618942e-05}, {"T": 11.0, "b": 0.00010164524254414721}, {"T": 12.0, "b": 0.000114307090080672}, {"T": 13.0, "b": 0.00012666335167589324}, {"T": 14.0, "b": 0.00013873210161250178}, {"T": 15.0, "b": 0.0001505294366400457}, {"T": 16.0, "b": 0.00016206981239199998}, {"T": 17.0, "b": 0.00017336630472067108}, {"T": 18.0, "b": 0.00018443081621828233}, {"T": 19.0, "b": 0.0001952742418795605}, {"T": 20.0, "b": 0.00020590660374872756}, {"T": 21.0, "b": 0.00021633716164148114}, {"T": 22.0, "b": 0.00022657450514619256}, {"T": 23.0, "b": 0.00023662663078816403}, {"T": 24.0, "b": 0.00024650100729900585}, {"T": 25.0, "b": 0.00025620463125}, {"T": 26.0, "b": 0.00026574407480508893}, {"T": 27.0, "b": 0.00027512552697326795}, {"T": 28.0, "b": 0.00028435482945586457}, {"T": 29.0, "b": 0.00029343750796663844}, {"T": 30.0, "b": 0.00030237879973437536}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
