@@ -1,4 +1,4 @@
-.. _authors:
+ï»¿.. _authors:
 
 ============
 Contributors
@@ -8,7 +8,7 @@ Edgar Donk, but mainly all those people working on python and Sphinx,
 without whom this would not have been possible.
 
 C.O. Popiel and Janusz Wojtkowiak on their paper "Simple Formulas for Thermophysical
-Properties of Liquid Water for Heat Transfer Calculations (from 0°C to 150°C)".
+Properties of Liquid Water for Heat Transfer Calculations (from 0Â°C to 150Â°C)".
 
 =======
 Contact
