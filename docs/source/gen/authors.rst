@@ -26,14 +26,14 @@ Repository
 
 You should find all the python examples and their widget images here.
 
-`dims! <https://github.com/Edgar-Donk/dims>`_
+`adam! <https://github.com/Edgar-Donk/Adams_Ale>`_
 
 Read the Docs
 =============
 
 Where you'll find the explanations.
 
-`Read the Docs <https://dims.readthedocs.io/en/latest/index.html>`_
+`Read the Docs <https://adams-ale.readthedocs.io/en/latest/index.html>`_
 
 
 Navigation
