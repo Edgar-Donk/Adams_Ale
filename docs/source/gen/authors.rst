@@ -134,13 +134,13 @@ Some of the trickier parts of tkinter.ttk
 
 .. _froth: https://frothy-brew.readthedocs.io/en/latest/index.html
 
-.. image:: _static/frothy_brew.png
+.. image:: ../_static/frothy_brew.png
    :width: 552
    :height: 104
    :target: froth_
    :class: only-light
 
-.. image:: _static/frothy_brewneon.png
+.. image:: ../_static/frothy_brewneon.png
    :width: 552
    :height: 104
    :target: froth_
@@ -153,13 +153,13 @@ Styling with tkinter.ttk
 
 .. _style: https://tkinterttkstyle.readthedocs.io/en/latest/index.html
 
-.. image:: _static/ben_style.png
+.. image:: ../_static/ben_style.png
    :width: 831
    :height: 104
    :target: style_
    :class: only-light
 
-.. image:: _static/bencneon_style.png
+.. image:: ../_static/bencneon_style.png
    :width: 831
    :height: 104
    :target: style_
@@ -172,13 +172,13 @@ Linking Python to Arduino
 
 .. _ard: https://electronic-python.readthedocs.io/en/latest/index.html
 
-.. image:: _static/arduino.png
+.. image:: ../_static/arduino.png
    :width: 572
    :height: 104
    :target: ard_
    :class: only-light
 
-.. image:: _static/arduinoneon.png
+.. image:: ../_static/arduinoneon.png
    :width: 572
    :height: 104
    :target: ard_
@@ -191,13 +191,13 @@ Adding dimensions to PIL
 
 .. _dims: https://pil-dimensions.readthedocs.io/en/latest/index.html
 
-.. image:: _static/ben_dim.png
+.. image:: ../_static/ben_dim.png
    :width: 955
    :height: 104
    :target: dims_
    :class: only-light   
 
-.. image:: _static/ben_dimneon.png
+.. image:: ../_static/ben_dimneon.png
    :width: 955
    :height: 104
    :target: dims_
