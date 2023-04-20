@@ -159,7 +159,7 @@ Styling with tkinter.ttk
    :target: style_
    :class: only-light
 
-.. image:: ../_static/bencneon_style.png
+.. image:: ../_static/benneon_style.png
    :width: 831
    :height: 104
    :target: style_
