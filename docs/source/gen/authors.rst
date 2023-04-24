@@ -211,13 +211,13 @@ Iterative Solutions
 
 .. _imps: https://pesky-imps.readthedocs.io/en/latest/index.html
 
-.. image:: _static/ben_imps.png
+.. image:: ../_static/ben_imps.png
    :width: 533
    :height: 104
    :target: imps_
    :class: only-light
 
-.. image:: _static/ben_impsneon.png
+.. image:: ../_static/ben_impsneon.png
    :width: 533
    :height: 104
    :target: imps_
