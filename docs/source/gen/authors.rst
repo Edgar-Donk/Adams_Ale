@@ -159,7 +159,7 @@ Styling with tkinter.ttk
    :target: style_
    :class: only-light
 
-.. image:: ../_static/benneon_style.png
+.. image:: ../_static/beneon_style.png
    :width: 831
    :height: 104
    :target: style_
@@ -206,4 +206,22 @@ Adding dimensions to PIL
 Add dimensions with either arrows or tailed lines, dashed lines and all
 made with antialiasing if required.
 
-    
+Iterative Solutions
+-------------------
+
+.. _imps: https://pesky-imps.readthedocs.io/en/latest/index.html
+
+.. image:: _static/ben_imps.png
+   :width: 533
+   :height: 104
+   :target: imps_
+   :class: only-light
+
+.. image:: _static/ben_impsneon.png
+   :width: 533
+   :height: 104
+   :target: imps_
+   :class: only-dark
+
+Iterative methods used for interpolation, extrapolation, root finding and 
+equation optimisation, many of the methods are similar.
