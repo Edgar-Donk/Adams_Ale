@@ -5,3 +5,4 @@ altair
 numpy
 pydata_sphinx_theme
 sphinx-copybutton
+urllib3<2
