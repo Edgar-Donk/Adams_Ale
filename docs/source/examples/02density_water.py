@@ -8,17 +8,17 @@ ps = 999.79684 + 0.068317355 * T - 0.010740248 * np.power(T, 2) \
     + 0.00082140905 * np.power(T, 2.5) - 2.3030988e-05 * np.power(T, 3)
 
 source = pd.DataFrame({
-  'T': T,
-  'ps': ps
+  'Temperature °C': T,
+  'ρs kg/m³': ps
 })
 
 chart = alt.Chart(source).mark_line().encode(
-    x=alt.X('T', axis=alt.Axis(title='Temperature °C')),
-    y=alt.Y('ps',
+    x='Temperature °C',
+    y=alt.Y('ρs kg/m³',
         scale=alt.Scale(domain=(995, 1000)),
         axis=alt.Axis(title='Density kg/m³')
         ),
-    tooltip=['T', alt.Tooltip('ps', format='.3f')]
+    tooltip=['Temperature °C', alt.Tooltip('ρs kg/m³', format='.3f')]
 ).properties(
         title={
             "text": "Density of Liquid Water",

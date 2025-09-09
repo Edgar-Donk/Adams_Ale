@@ -1,6 +1,7 @@
 import altair as alt
 import numpy as np
 import pandas as pd
+#alt.renderers.enable('altair_viewer')
 
 T = np.linspace(0, 30, 31)
 tau = 1 - (273.15 + T)/647.096
@@ -12,16 +13,16 @@ expo = 2.03150240 * np.power(tau, 1/3) + 2.68302940 * np.power(tau, 2/3) + \
 th = 1/322 * np.exp(expo)
 
 source = pd.DataFrame({
-  'T': T,
-  'th': th
+  'Temperature °C': T,
+  'sat vap sp volume, m³/kg': th
 })
 
 chart = alt.Chart(source).mark_line().encode(
-    x=alt.X('T', axis=alt.Axis(title='Temperature °C')),
-    y=alt.Y('th',
+    x=alt.X('Temperature °C', axis=alt.Axis(title='Temperature °C')),
+    y=alt.Y('sat vap sp volume, m³/kg',
            scale=alt.Scale(domain=(30, 210)),
             axis=alt.Axis(title='sat vap sp volume, m³/kg')),
-    tooltip=['T', alt.Tooltip('th', format='.2f')]
+    tooltip=['Temperature °C', alt.Tooltip('sat vap sp volume, m³/kg', format='.2f')]
 ).properties(
         title={
             "text": "Saturated Vapour Specific Volume",
@@ -30,3 +31,4 @@ chart = alt.Chart(source).mark_line().encode(
     )
 
 chart.save('spvol_vap.html')
+#chart.show()

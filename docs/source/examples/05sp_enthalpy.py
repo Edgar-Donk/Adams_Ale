@@ -9,14 +9,14 @@ hs = -2.844699e-02 + 4.211925 * T - 1.017034e-03 * np.power(T, 2) + \
     1.724481e-10 * np.power(T, 5)
 
 source = pd.DataFrame({
-  'T': T,
-  'hs': hs
+  'Temperature °C': T,
+  'Specific Enthalpy of Liquid Water': hs
 })
 
 chart = alt.Chart(source).mark_line().encode(
-    x=alt.X('T', axis=alt.Axis(title='Temperature °C')),
-    y=alt.Y('hs', axis=alt.Axis(title='Spec Enthalpy kJ/kg')),
-    tooltip=['T', alt.Tooltip('hs', format='.2f')]
+    x=alt.X('Temperature °C', axis=alt.Axis(title='Temperature °C')),
+    y=alt.Y('Specific Enthalpy of Liquid Water', axis=alt.Axis(title='Spec Enthalpy kJ/kg')),
+    tooltip=['Temperature °C', alt.Tooltip('Specific Enthalpy of Liquid Water', format='.2f')]
 ).properties(
         title={
             "text": "Specific Enthalpy of Liquid Water",

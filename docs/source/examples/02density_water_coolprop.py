@@ -11,20 +11,20 @@ ps = 999.79684 + 0.068317355 * T - 0.010740248 * np.power(T, 2) \
 wds=[PropsSI('D','T',i+273.15,'Q',0,'Water') for i in range(31)]
 
 source = pd.DataFrame({
-  'T': T,
-  'ps': ps,
+  'Temperature °C': T,
+  'ρs kg/m³': ps,
   'wds': wds
 })
 
 source = df.reset_index().melt('x')
 
 chart = alt.Chart(source).mark_line().encode(
-    x=alt.X('T', axis=alt.Axis(title='Temperature °C')),
-    y=alt.Y('ps',
+    x=alt.X('Temperature °C', axis=alt.Axis(title='Temperature °C')),
+    y=alt.Y('ρs kg/m³',
         scale=alt.Scale(domain=(995, 1000)),
         axis=alt.Axis(title='Density kg/m³')
         ),
-    tooltip=['T', alt.Tooltip('ps', format='.3f')]
+    tooltip=['Temperature °C', alt.Tooltip('ρs kg/m³', format='.3f')]
 ).properties(
         title={
             "text": "Density of Liquid Water",
