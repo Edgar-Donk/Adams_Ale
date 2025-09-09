@@ -71,15 +71,15 @@ Working with Altair
 ===================
 
 Altair favours interactive working and saving in various formats, including
-html which allows the interactivity to be shown in web sites. It works with 
-jupyterlab (not jupyter notebook) which needs to be separately installed.
-As with the notebook open the OS command and change to a user owned folder
-before starting Jupyter with the command::
+html which allows the interactivity to be shown in web sites. Later versions
+work on both jupyter lab and jupyter notebook.
+Open at the OS command (cmd) start Jupyter with the command::
 
     jupyter lab
 
-This should open jupyter, either the console is directly opened where one can
-work directly with pandas or else there is a choice of 
+This should open jupyter, either the console is directly opened in the
+default web browser where one can
+work directly with pandas and altair, or else there is a choice of 
 
 * Notebook
 * Console
@@ -111,33 +111,8 @@ The code should run and after a slight delay display in the same tab.
     The chart does not require a name, nor does it require an instruction
     such as **chart.show()**
 
-Altair_viewer
--------------
-
-When using altair_viewer with Thonny (for example), altair_viewer is a 
-separately installed package::
-
-    import altair as alt
-    alt.renderers.enable('altair_viewer')
-    
-    RendererRegistry.enable('altair_viewer')
-    
-    # load a simple dataset as a pandas DataFrame
-    from vega_datasets import data
-    cars = data.cars()
-
-    chart = alt.Chart(cars).mark_point().encode(
-        x='Horsepower',
-        y='Miles_per_Gallon',
-        color='Origin',
-    ).interactive()
-
-    chart.show()
-    
-    Displaying chart at http://localhost:64534/
-
-Look at the default browser window to view the plot, until the browser tab is 
-closed the python session is temporarily stopped.
+Many options in the Jupyter lab and notebook remain unobtainable, so do not
+raise your hopes on a better user experience for the foreseeable future.
 
 Encoding Data Types
 -------------------
@@ -168,6 +143,118 @@ The following two snippets are equivalent::
         alt.Color('Origin', type='nominal')
     )
     ....
+
+When working with Pandas or the vega_database, altair detects the type 
+automatically, all other 
+DataFrames require type to be declared. So the following are equivalent::
+
+   import altair as alt
+   import pandas as pd
+
+   data = pd.DataFrame({'x': ['A', 'B', 'C', 'D', 'E'],
+                        'y': [5, 3, 6, 7, 2]})
+      alt.Chart(data).mark_bar().encode(
+         x='x',
+         y='y',
+      )
+
+Other DataFrames using a *data* object specified using JSON-style list of
+records::
+
+   import altair as alt
+
+   data = alt.Data(values=[{'x': 'A', 'y': 5},
+                           {'x': 'B', 'y': 3},
+                           {'x': 'C', 'y': 6},
+                           {'x': 'D', 'y': 7},
+                           {'x': 'E', 'y': 2}])
+      alt.Chart(data).mark_bar().encode(
+         x='x:N',  # specify nominal data
+         y='y:Q',  # specify quantitative data
+      )
+
+When data is imported from a URL then the data types need to be declared.
+
+.. note:: Using Different Types
+
+   Different data types can affect the altair default color, as shown in the
+   folowing example with three horizontally-concatenated charts, it also 
+   affects the legend.
+
+.. figure:: ../figures/plot_datatypes.avif
+    :width: 1000
+    :align: center
+    :height: 288px   
+
+Color encoded as a datatype
+
+.. raw:: html
+
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> plot-datatypes.py </summary>
+
+.. literalinclude:: ../examples/plot-datatypes.py
+
+.. raw:: html
+
+   </details>
+
+|
+
+.. note:: Data Types Affect AxisScales
+
+   The type used for the data will affect the scales used and the 
+   characteristics of the mark.
+
+.. figure:: ../figures/plot_datatypes01.avif
+    :width: 1000
+    :align: center
+    :height: 325px
+
+Missing data found on 2 datatypes, but the years require formatting
+
+.. raw:: html
+
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> plot-datatypes01.py </summary>
+
+.. literalinclude:: ../examples/plot-datatypes01.py
+
+.. raw:: html
+
+   </details>
+
+|
+
+Because values on quantitative and temporal scales do not have an inherent 
+width, the bars do not fill the entire space between the values. These scales 
+clearly show the missing year of data that was not immediately apparent when 
+we treated the years as ordinal data, but the axis formatting is undesirable 
+in the other two cases.
+
+To plot four digit integers as years with proper axis formatting, 
+i.e. without thousands separator, convert the integers to 
+strings first, and the specifying a temporal data type in Altair. While it 
+is also possible to change the axis format with .axis(format='i'), it is 
+preferred to specify the appropriate data type to Altair::
+
+   pop['year'] = pop['year'].astype(str)
+
+   base.mark_bar().encode(x='year:T').properties(title='temporal')
+
+.. hint:: Working in Jupyter
+
+   As opposed to many Python GUIs the previous input stands, if the data source
+   changes provided that the imports still stand::
+   
+      import altair as alt
+      from vega_datasets import data
+   
+   one can continue modifying the code without reimporting - but beware of
+   side effects. If the name of the altair *Chart* is declared then ensure
+   that this is not used for a different set of *data*. 
 
 Altair Tooltip
 --------------

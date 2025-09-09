@@ -39,7 +39,7 @@ Where you'll find the explanations.
 Navigation
 ==========
 
-.. figure:: ../figures/pydata.png
+.. figure:: ../figures/pydata.avif
     :width: 727
     :height: 330
     :align: center
@@ -134,13 +134,13 @@ Some of the trickier parts of tkinter.ttk
 
 .. _froth: https://frothy-brew.readthedocs.io/en/latest/index.html
 
-.. image:: ../_static/frothy_brew.png
+.. image:: ../_static/frothy_brew.avif
    :width: 552
    :height: 104
    :target: froth_
    :class: only-light
 
-.. image:: ../_static/frothy_brewneon.png
+.. image:: ../_static/frothy_brewneon.avif
    :width: 552
    :height: 104
    :target: froth_
@@ -153,13 +153,13 @@ Styling with tkinter.ttk
 
 .. _style: https://tkinterttkstyle.readthedocs.io/en/latest/index.html
 
-.. image:: ../_static/ben_style.png
+.. image:: ../_static/ben_style.avif
    :width: 831
    :height: 104
    :target: style_
    :class: only-light
 
-.. image:: ../_static/benneon_style.png
+.. image:: ../_static/benneon_style.avif
    :width: 831
    :height: 104
    :target: style_
@@ -172,13 +172,13 @@ Linking Python to Arduino
 
 .. _ard: https://electronic-python.readthedocs.io/en/latest/index.html
 
-.. image:: ../_static/arduino.png
+.. image:: ../_static/arduino.avif
    :width: 572
    :height: 104
    :target: ard_
    :class: only-light
 
-.. image:: ../_static/arduinoneon.png
+.. image:: ../_static/arduinoneon.avif
    :width: 572
    :height: 104
    :target: ard_
@@ -191,13 +191,13 @@ Adding dimensions to PIL
 
 .. _dims: https://pil-dimensions.readthedocs.io/en/latest/index.html
 
-.. image:: ../_static/ben_dim.png
+.. image:: ../_static/ben_dim.avif
    :width: 955
    :height: 104
    :target: dims_
    :class: only-light   
 
-.. image:: ../_static/ben_dimneon.png
+.. image:: ../_static/ben_dimneon.avif
    :width: 955
    :height: 104
    :target: dims_
@@ -211,13 +211,13 @@ Iterative Solutions
 
 .. _imps: https://pesky-imps.readthedocs.io/en/latest/index.html
 
-.. image:: ../_static/ben_imps.png
+.. image:: ../_static/ben_imps.avif
    :width: 533
    :height: 104
    :target: imps_
    :class: only-light
 
-.. image:: ../_static/ben_impsneon.png
+.. image:: ../_static/ben_impsneon.avif
    :width: 533
    :height: 104
    :target: imps_
@@ -231,13 +231,13 @@ Dataframe
 
 .. _framed: https://frameyourdata.readthedocs.io/en/latest/index.html
 
-.. image:: ../_static/ben_framed.png
+.. image:: ../_static/ben_framed.avif
    :width: 653
    :height: 104
    :target: framed_
    :class: only-light
 
-.. image:: ../_static/ben_framedneon.png
+.. image:: ../_static/ben_framedneon.avif
    :width: 653
    :height: 104
    :target: framed_
@@ -245,3 +245,24 @@ Dataframe
 
 Load data, change the names and the layout (wide or long format), clean, save 
 and visualise the data.
+
+Flask
+-----
+
+.. _flask: https://python-flask.readthedocs.io/en/latest/index.html
+
+.. image:: ../_static/ben_flask.avif
+   :width: 533
+   :height: 104
+   :target: imps_
+   :class: only-light
+
+.. image:: ../_static/ben_flaskneon.avif
+   :width: 533
+   :height: 104
+   :target: imps_
+   :class: only-dark
+
+Create and control web pages working under a Flask server 
+that powers a dynamic web 
+application, where user actions affect the content.
