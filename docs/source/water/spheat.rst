@@ -30,10 +30,16 @@ where
 The plot is from 0 to 30°C, but is valid 0 to 130°C. A minimum is at
 ~35°C.
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 06sp_ht.py </summary>
 
-        *Show/Hide Code* 06sp_ht.py
+.. literalinclude:: ../examples/06sp_ht.py
 
-    .. literalinclude:: ../examples/06sp_ht.py
+.. raw:: html
+
+   </details>
+
+|

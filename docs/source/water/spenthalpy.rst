@@ -37,10 +37,16 @@ where
 
 which should give an almost linear plot.
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 05sp_enthalpy.py </summary>
 
-        *Show/Hide Code* 05sp_enthalpy.py
+.. literalinclude:: ../examples/05sp_enthalpy.py
 
-    .. literalinclude:: ../examples/05sp_enthalpy.py
+.. raw:: html
+
+   </details>
+
+|    

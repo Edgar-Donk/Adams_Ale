@@ -30,10 +30,16 @@ where
     
 The plot shows the maximum at the point of maximum density.
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 02density_water.py </summary>
 
-        *Show/Hide Code* 02density_water.py
+.. literalinclude:: ../examples/02density_water.py
 
-    .. literalinclude:: ../examples/02density_water.py
+.. raw:: html
+
+   </details>
+
+|

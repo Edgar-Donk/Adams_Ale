@@ -37,10 +37,16 @@ where
     e       is -2.8607959e-05
     ===== =================================================
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 07lat_ht.py </summary>
 
-        *Show/Hide Code* 07lat_ht.py
+.. literalinclude:: ../examples/07lat_ht.py
 
-    .. literalinclude:: ../examples/07lat_ht.py
+.. raw:: html
+
+   </details>
+
+|

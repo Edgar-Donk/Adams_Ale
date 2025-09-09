@@ -27,10 +27,16 @@ where
     e       is -0.0009412945
     ===== ===================================================
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 08th_condy.py </summary>
 
-        *Show/Hide Code* 08th_condy.py
+.. literalinclude:: ../examples/08th_condy.py
 
-    .. literalinclude:: ../examples/08th_condy.py
+.. raw:: html
+
+   </details>
+
+|    

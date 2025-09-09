@@ -22,10 +22,16 @@ where
     d       is 2.7588435e-10
     ===== ==================================================
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 11surf_tens.py </summary>
 
-        *Show/Hide Code* 11surf_tens.py
+.. literalinclude:: ../examples/11surf_tens.py
 
-    .. literalinclude:: ../examples/11surf_tens.py
+.. raw:: html
+
+   </details>
+
+|    

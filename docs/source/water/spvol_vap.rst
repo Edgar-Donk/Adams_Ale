@@ -40,10 +40,16 @@ where
     |c6|    is 63.9201063
     ===== =================================================
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 04spvol_vap.py </summary>
 
-        *Show/Hide Code* 04spvol_vap.py
+.. literalinclude:: ../examples/04spvol_vap.py
 
-    .. literalinclude:: ../examples/04spvol_vap.py
+.. raw:: html
+
+   </details>
+
+|    

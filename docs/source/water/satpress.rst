@@ -50,10 +50,16 @@ Seaborn would have made sense. The chart has been created for values between
 In general these plots rely upon numpy to create the data for the x and y
 axes.
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 01sat_press_water_title_red.py </summary>
 
-        *Show/Hide Code* 01sat_press_water_title_red.py
+.. literalinclude:: ../examples/01sat_press_water_title_red.py
 
-    .. literalinclude:: ../examples/01sat_press_water_title_red.py
+.. raw:: html
+
+   </details>
+
+|

@@ -38,10 +38,16 @@ end of the dynamic viscosity section in the paper by Popiel and Wojtkowiak
     Hover your mouse over the intersection between the plot and 20°C, the
     tooltip shows ``1002.1``.
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 09dyn_viscy.py </summary>
 
-        *Show/Hide Code* 09dyn_viscy.py
+.. literalinclude:: ../examples/09dyn_viscy.py
 
-    .. literalinclude:: ../examples/09dyn_viscy.py
+.. raw:: html
+
+   </details>
+
+|

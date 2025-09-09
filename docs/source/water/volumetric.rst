@@ -34,10 +34,16 @@ where
 At the temperature of maximum density the coefficient of volumetric thermal
 expansion is zero as the values pass from positive to negative values.
 
-.. container:: toggle
+.. raw:: html
 
-    .. container:: header
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 03vol_exp.py </summary>
 
-        *Show/Hide Code* 03vol_exp.py
+.. literalinclude:: ../examples/03vol_exp.py
 
-    .. literalinclude:: ../examples/03vol_exp.py
+.. raw:: html
+
+   </details>
+
+|

@@ -24,10 +24,14 @@ where
     d       is -8.1395537e-08
     ===== ==================================================
 
-.. container:: toggle
+   <details>
+   <summary style="color:MediumSlateBlue"> 
+   <i> Show/Hide Code </i> 10prandtl.py </summary>
 
-    .. container:: header
+.. literalinclude:: ../examples/10prandtl.py
 
-        *Show/Hide Code* 10prandtl.py
+.. raw:: html
 
-    .. literalinclude:: ../examples/10prandtl.py
+   </details>
+
+|
