@@ -14,6 +14,7 @@ import os
 import sys
 # sys.path.insert(0, os.path.abspath('./scripts/'))
 
+
 # The master toctree document.
 master_doc = 'index'
 # -- Project information -----------------------------------------------------
@@ -37,10 +38,10 @@ extensions = ["sphinx.ext.autodoc",
     # "numpydoc",
     'sphinx.ext.mathjax',
     'sphinx_copybutton',
-   # 'matplotlib.sphinxext.plot_directive',
-   # 'sphinx_exec_code',
+    #'matplotlib.sphinxext.plot_directive',
+    #'sphinx_exec_code',
     #'sphinx.ext.duration',
-   # 'sphinx.ext.doctest',
+    #'sphinx.ext.doctest',
 ]
 
 napoleon_google_docstring = False
@@ -85,6 +86,7 @@ html_sidebars = {
         'searchbox.html'
 
     ]
+}
 '''
     "contributing": ["sidebar-search-bs.html", "custom-template.html"],
     "changelog": [],
