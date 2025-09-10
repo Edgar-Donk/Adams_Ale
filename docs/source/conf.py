@@ -92,17 +92,11 @@ html_sidebars = {
     "changelog": [],
 }
 
-# option for show/hide code
-def setup(app):
-    app.add_css_file('custom.css') # stylesheet
-
-#html_logo = "_static/ben2.png"
-
 html_theme_options = {
    "logo": {
       "text": "Adam's Ale",
-      "image_light": 'bigbenc.png',
-      "image_dark": "bigbencneon.png",
+      "image_light": 'bigbenc.avif',
+      "image_dark": "bigbencneon.avif",
    }
 }
 
