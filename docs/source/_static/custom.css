@@ -15,7 +15,7 @@ rem units based on 16px base html size
 
 @font-face {
      font-family: "Kingofthieves";
-     src: url(Kingofthieves-v6mL.ttf);
+     src: url(./_style/Kingofthieves-v6mL.ttf);
 }
 
 .keys {
