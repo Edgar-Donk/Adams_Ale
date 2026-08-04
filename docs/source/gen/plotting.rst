@@ -127,6 +127,21 @@ Encoding Data Types
     geojson         G            a geographic shape
     ============ ============== ===================================
 
+Q
+   Quantitative data is any numerical data at all.
+O
+   These are the names of things that we associate as having a certain order. 
+   Days of the week, months of the year, gold-silver-bronze, those sorts of things.
+   They have only a few unique values.
+N
+   These are the names of things - any thing at all. Cats, dogs, apples, oranges.
+T
+   Temporal data is datetime data.
+   If it is quoted then it is temporal, if it is called after a time set but 
+   just a plain number then it will be ordinal.
+G
+   Geographical Data is .geojson data, latitudes and longitudes.
+
 The following two snippets are equivalent::
 
     ....
@@ -144,9 +159,10 @@ The following two snippets are equivalent::
     )
     ....
 
-When working with Pandas or the vega_database, altair detects the type 
-automatically, all other 
-DataFrames require type to be declared. So the following are equivalent::
+When working with Pandas or the vega_database or any declared DataFrame, altair 
+detects the type 
+automatically, other data inputs
+require the type to be declared. So the following are equivalent::
 
    import altair as alt
    import pandas as pd
@@ -172,6 +188,20 @@ records::
          x='x:N',  # specify nominal data
          y='y:Q',  # specify quantitative data
       )
+
+    +---------------+-------------------+-----------------------------------+
+    | Data Type     |   Shorthand Code  | Description                       |
+    +===============+===================+===================================+
+    | quantitative  |   Q               | a continuous real-valued quantity |
+    +---------------+-------------------+-----------------------------------+
+    | ordinal       |   O               | a discrete ordered quantity       |
+    +---------------+-------------------+-----------------------------------+
+    | nominal       |   N               | a discrete unordered category     |
+    +---------------+-------------------+-----------------------------------+
+    | temporal      |   T               | a time or date value              |
+    +---------------+-------------------+-----------------------------------+
+    | geojson       |   G               | a geographic shape                |
+    +---------------+-------------------+-----------------------------------+
 
 When data is imported from a URL then the data types need to be declared.
 
